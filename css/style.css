@@ -1,0 +1,19 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  --dark_green: #1a261c;
+  --beige: #ffffe2;
+  --light_green: #c0d8c4;
+  --dark_grey: #404040;
+  --yellow: #ffffd9;
+}
