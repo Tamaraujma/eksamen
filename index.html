@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Ga+Maamli&family=Jaro:opsz@6..72&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Onest:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Slabo+13px&family=Slabo+27px&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Ga+Maamli&family=Jaro:opsz@6..72&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montaga&family=Onest:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Slabo+13px&family=Slabo+27px&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Forside</title>
@@ -10,11 +18,11 @@
   <body>
     <header>
       <nav>
-        <ul class="menu">
-          <div class="logo">
-            <h1>Tamara</h1>
-          </div>
+        <div class="logo">
+          <h1>Tamara</h1>
+        </div>
 
+        <ul class="menu">
           <li><a href="index.html">Forside</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
 
@@ -26,9 +34,27 @@
           </ul>
           <li><a href="om_mig.html">Om mig</a></li>
         </ul>
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </nav>
     </header>
 
-    <main></main>
+    <main>
+      <div class="Forside">
+        <img src="billeder/Artboard 5.svg" alt="artboard" class="forside_hero" />
+        <div class="forside_tekst">
+          <h1>Portfolio</h1>
+          <h2>Tamara Ujmajuridze</h2>
+        </div>
+      </div>
+      <a href="portfolio.html" class="portfolio_knap">Portfolio</a>
+    </main>
+    <script src="burger.js"></script>
   </body>
+  <footer>
+    <h1>Tamara</h1>
+  </footer>
 </html>

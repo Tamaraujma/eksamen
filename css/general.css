@@ -9,3 +9,271 @@ img {
   height: auto;
   display: block;
 }
+
+@media (min-width: 800px) {
+  header {
+    justify-content: end;
+    z-index: 10;
+    background-color: var(--green);
+  }
+
+  .menu {
+    display: none;
+    grid-template-columns: unset;
+    grid-gap: unset;
+  }
+  .burger {
+    display: block;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--green);
+    position: absolute;
+    border-radius: 2px;
+    top: 90px;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 10px 10px #404040;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin-top: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font: 20px;
+    margin-left: -1rem;
+  }
+
+  ul li a {
+    display: block;
+    text-decoration: none;
+    text-align: start;
+    font-size: 15px;
+  }
+  ul li ul.dropdown li {
+    display: block;
+  }
+
+  ul li ul.dropdown li a {
+    font-size: 10px;
+    text-align: start;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 10px;
+  }
+
+  footer h1 {
+    margin-left: 40rem;
+    margin-top: 3rem;
+  }
+
+  .forside {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Fylder hele skærmen (kan justeres) */
+    background-size: cover; /* Sørger for, at billedet dækker hele sektionen */
+    display: flex;
+    justify-content: center; /* Centrerer vandret */
+    align-items: center; /* Centrerer lodret */
+  }
+  .forside_hero {
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+  }
+
+  .forside_tekst {
+    position: absolute;
+    top: 85%; /* Justerer tekstens position */
+    left: 49%;
+    transform: translate(-50%, -50%); /* Centrerer teksten */
+    text-align: center;
+    padding: 20px; /* Justerer tekstens plads */
+    border-radius: 10px; /* Afrunder kanter (valgfrit) */
+  }
+
+  .forside_tekst h1 {
+    color: var(--green);
+    font-size: 6rem; /* Størrelse på hovedteksten */
+    margin-top: 0; /* Fjern ekstra margin */
+    line-height: 1.2;
+    font-family: "Be vietnam pro";
+  }
+
+  .forside_tekst h2 {
+    position: absolute;
+    color: var(--green);
+    font-size: 35px; /* Størrelse på underteksten */
+    margin-top: 0; /* Fjern ekstra margin */
+    margin-top: 10px; /* Tilføj lidt luft mellem linjerne */
+    top: 190%;
+    left: 15%;
+    font-family: "Be vietnam pro";
+  }
+  .portfolio_knap {
+    display: inline-block;
+    font-family: "Montaga";
+    padding: 20px 100px; /* Indvendig afstand */
+    font-size: 30px; /* Juster tekststørrelse */
+    font-weight: bold; /* Fed skrift */
+    color: var(--green); /* Tekstfarve */
+    background-color: var(--beige); /* Blå baggrund */
+    border: none; /* Fjern kant */
+    border-radius: 5px; /* Runde hjørner */
+    text-align: center; /* Centrer teksten */
+    text-decoration: none; /* Fjern understregning */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lidt skygge */
+    transition: all 0.3s ease; /* Glat overgang */
+    margin-left: 30rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .portfolio_knap:hover {
+    background-color: var(--pink);
+  }
+  .box,
+  .box_3,
+  .box_4 {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .grid_1-1_tema_1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .grid_1-1_tema_1-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .grid_1-1_tema_1-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .col_5-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .col_5-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .col_5_3 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .col_5_4 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .om_mig {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .video1 {
+    margin-left: 2rem;
+    width: 40%;
+    height: 300px;
+  }
+}
+
+.grid_1-1_tema_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_tema_1-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_tema_1-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_tema_2-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_tema_2-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_tema_2-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_tema_4-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid_1-1_tema_4-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_tema_4-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid_1-1_tema_5-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_tema_5-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_tema_5-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_tema_5-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_om_mig {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
