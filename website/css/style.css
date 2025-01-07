@@ -1,0 +1,849 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  --dark_green: #1a261c;
+  --beige: #eaeade;
+  --light_green: #c0d8c4;
+  --dark_grey: #404040;
+  --yellow: #ffffd9;
+  --pink: #e2ccd2;
+  --lyseroed: #f2d0d9;
+  --green: #556758;
+  --grøn: #606c62;
+  --brun: #beb4ab;
+  --sort: black;
+  --mørkebrun: #58524b;
+  --hvid: #fff6f9;
+}
+
+h1 {
+  font-family: "Montaga";
+  font-size: 80px;
+}
+
+h2 {
+  font-family: "Slabo 13px";
+  font-size: 40px;
+  margin-left: 4rem;
+}
+
+body {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  background-color: var(--hvid);
+}
+
+header {
+  position: sticky;
+  display: flex;
+  background-color: var(--green);
+  color: #c0d8c4;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 2px;
+  z-index: 10;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+a {
+  text-decoration: none;
+}
+.menu a {
+  display: block;
+  color: var(--light_green);
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 28px;
+  text-align: end;
+  margin-left: 20px;
+  transition: color 0.3s;
+  font-family: "Slabo 13px";
+}
+
+.menu a:hover {
+  color: var(--lyseroed);
+  transform: scale(1.03);
+}
+ul {
+  list-style: none;
+  background-color: var(--green);
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+}
+
+ul li a {
+  display: block;
+  color: var(--light_green);
+  text-decoration: none;
+  text-align: start;
+  font-size: 20px;
+}
+ul li a {
+  display: block;
+  text-decoration: none;
+  text-align: start;
+  font-size: 15px;
+}
+
+ul li ul.dropdown li {
+  display: block;
+}
+
+ul li ul.dropdown li a {
+  font-size: 20px;
+  text-align: start;
+}
+
+ul li ul.dropdown {
+  width: 200px;
+  background-color: var(--green);
+  position: absolute;
+  z-index: 999;
+  display: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
+}
+
+.logo {
+  justify-content: left;
+  font-size: 60px;
+  margin-right: auto;
+  text-align: left;
+  margin-right: 10rem;
+}
+
+footer {
+  background-color: var(--green);
+  width: 100%;
+  height: 280px;
+  color: var(--pink);
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10rem;
+}
+footer h1 {
+  padding-top: 2rem;
+}
+
+footer h3 {
+  color: var(--lyseroed);
+  font-family: "Montaga";
+  text-align: start;
+  margin-left: 5rem;
+}
+footer p {
+  font-size: 22px;
+  text-align: start;
+  list-style: none;
+  margin-left: 5rem;
+  font-family: "Montaga";
+}
+
+.forside {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
+.forside_hero {
+  width: 100%;
+  height: auto;
+  margin-top: 3rem;
+}
+
+.portfolio_knap {
+  display: inline-block;
+  font-family: "Montaga";
+  padding: 20px 60px;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--green);
+  background-color: var(--beige);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.portfolio_knap:hover {
+  background-color: var(--pink);
+}
+
+.portfolio_grid_1-1 {
+  margin-top: 2rem;
+  background-color: #5e6d61;
+}
+
+.box,
+.box_3,
+.box_4 {
+  background-color: var(--grøn);
+  border: 8px solid var(--dark_grey);
+  border-radius: 15px;
+  width: 450px;
+  height: 320px;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: "Montaga";
+  gap: 20px;
+  margin-left: 9rem;
+}
+
+.box_3,
+.box_4 {
+  padding-bottom: 4rem;
+}
+
+.box,
+.box_3,
+.box_4,
+h3 {
+  font-size: 31px;
+  margin-bottom: 20px;
+  color: var(--yellow);
+  margin-top: 30px;
+}
+
+/* Knap-styling */
+
+.button_1,
+.button_2,
+.button_3,
+.button_4 {
+  background-color: transparent;
+  border: 6px solid var(--dark_grey);
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 20px 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  list-style: none;
+  font-family: "Montaga";
+  font-size: 30px;
+  margin-top: 30px;
+  color: var(--dark_grey);
+}
+
+.button_1 a {
+  display: block;
+  color: var(--yellow);
+}
+
+.button_2 a {
+  display: block;
+  color: var(--yellow);
+}
+
+.button_3 a {
+  display: block;
+  color: var(--yellow);
+}
+.button_4 a {
+  display: block;
+  color: var(--yellow);
+}
+
+.box .button_1:hover {
+  background-color: #eae8d7;
+}
+
+.box .button_1:hover a {
+  color: var(--green);
+}
+
+.box .button_2:hover {
+  background-color: #eae8d7;
+}
+
+.box .button_2:hover a {
+  color: #5e6d61;
+}
+
+.box_3 .button_3:hover {
+  background-color: #eae8d7;
+}
+
+.box_3 .button_3:hover a {
+  color: #5e6d61;
+}
+
+.box_4 .button_4:hover {
+  background-color: #eae8d7;
+}
+
+.box_4 .button_4:hover a {
+  color: #5e6d61;
+}
+
+.hero {
+  background-image: url(../billeder/Artboard_2.svg);
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.grid_1-1_tema_1-1 {
+  background-color: var(--beige);
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+.col_tekst_1 {
+  margin-left: 2rem;
+  font-family: "Montaga";
+  margin-right: 2rem;
+  font-size: 19px;
+  color: var(--grøn);
+  margin-top: 1rem;
+  line-height: 28px;
+}
+
+.col_tekst_1 p {
+  margin-bottom: 1rem;
+}
+.tema_2_img_1 {
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+main h1 {
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 50px;
+  color: var(--dark_grey);
+}
+
+.grid_1-1_tema_1-2 {
+  background-color: var(--light_green);
+  margin-bottom: 4rem;
+}
+
+.tema_2_img_2 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
+.col_tekst_2 {
+  font-family: "Montaga";
+  font-size: 20px;
+  color: var(--green);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  line-height: 28px;
+  margin-bottom: 2rem;
+}
+
+.col_tekst_2 p {
+  margin-bottom: 1rem;
+}
+
+.col_tekst_2 h3 {
+  color: var(--green);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.grid_1-1_tema_1-3 {
+  background-color: var(--green);
+  margin-bottom: 1rem;
+}
+
+.tema_2_img_3 {
+  margin-right: 3rem;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+.tema_2_img_4 {
+  margin-right: 3rem;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+.website_1,
+.website_2,
+.website_3,
+.website_4,
+.website_5 {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--lyseroed);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  font-family: "";
+}
+
+.website_1:hover {
+  transform: scale(1.05);
+  color: var(--dark_grey);
+}
+.website_2:hover {
+  transform: scale(1.05);
+  color: var(--dark_grey);
+}
+.website_3:hover {
+  transform: scale(1.05);
+  color: var(--dark_grey);
+}
+.website_4:hover {
+  transform: scale(1.05);
+  color: var(--dark_grey);
+}
+
+.website_5:hover {
+  transform: scale(1.05);
+  color: var(--dark_grey);
+}
+
+.grid_1-1_tema_2-1 {
+  background-color: var(--brun);
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+.col_tekst_2-1 {
+  color: var(--mørkebrun);
+  font-family: "Montaga";
+  font-size: 20px;
+  margin-left: 3rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  line-height: 28px;
+}
+
+.liste_1 {
+  margin: 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.liste_1::before {
+  content: "•"; /* Bullet-symbol */
+  position: absolute;
+  left: 0;
+  color: var(--mørkebrun); /* Farve på punktet */
+  font-size: 1.2em; /* Justér størrelsen på punktet */
+}
+.col_tekst_2-1 h3 {
+  color: var(--mørkebrun);
+  text-align: center;
+}
+.col_tekst_2-1 p {
+  margin-top: 20px;
+  margin-bottom: 1rem;
+}
+
+.tema_3_img_1 {
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
+.grid_1-1_tema_2-2 {
+  background-color: var(--pink);
+  margin-bottom: 4rem;
+}
+
+.tema_3_img_2 {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.col_tekst_2-2 {
+  font-family: "Montaga";
+  font-size: 20px;
+  color: var(--mørkebrun);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  line-height: 28px;
+  margin-bottom: 2rem;
+}
+
+.col_tekst_2-2 h3 {
+  color: var(--mørkebrun);
+  text-align: center;
+}
+
+.col_tekst_2-2 p {
+  margin-bottom: 20px;
+}
+
+.grid_1-1_tema_2-3 {
+  background-color: var(--mørkebrun);
+  margin-bottom: 1rem;
+}
+
+.col_tekst_2-3 {
+  font-family: "Montaga";
+  font-size: 20px;
+  color: var(--lyseroed);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 3rem;
+  line-height: 28px;
+}
+
+.col_tekst_2-3 p {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.liste_2 {
+  position: relative;
+  padding-left: 20px;
+}
+
+.liste_2::before {
+  content: "•"; /* Bullet-symbol */
+  position: absolute;
+  left: 0;
+  color: var(--lyseroed); /* Farve på punktet */
+  font-size: 1.2em; /* Justér størrelsen på punktet */
+}
+
+.tema_3_img_3 {
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+}
+
+.grid_1-1_tema_4-1 {
+  background-color: var(--beige);
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+.tema_4_img_1 {
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+.col_tekst_4-1 {
+  font-family: "Montaga";
+  color: var(--dark_grey);
+  font-size: 20px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  line-height: 28px;
+}
+.col_tekst_4-1 p {
+  margin-bottom: 1rem;
+}
+.col_tekst_4-1 h3 {
+  color: var(--mørkebrun);
+  text-align: center;
+}
+
+.grid_1-1_tema_4-2 {
+  background-color: var(--brun);
+  margin-bottom: 4rem;
+}
+
+.col_tekst_4-2 {
+  font-family: "Montaga";
+  color: var(--mørkebrun);
+  font-size: 20px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  line-height: 28px;
+  margin-bottom: 1rem;
+}
+
+.col_tekst_4-2 p {
+  margin-bottom: 1rem;
+}
+
+.col_tekst_4-2 h3 {
+  color: var(--mørkebrun);
+  text-align: center;
+}
+.tema_4_img_2 {
+  margin-right: 2rem;
+}
+
+.grid_1-1_tema_4-3 {
+  background-color: var(--pink);
+  margin-bottom: 1rem;
+  row-gap: 1rem;
+}
+
+.col_tekst_4-3 {
+  font-family: "Montaga";
+  font-size: 20px;
+  color: var(--dark_grey);
+  line-height: 28px;
+  text-align: start;
+}
+
+.tema_4_img_4 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.grid_1-1_tema_5-1 {
+  background-color: var(--pink);
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+
+.tema_5_img_1 {
+  margin-left: 3rem;
+  margin-top: 2rem;
+  width: 90%;
+  height: 600px;
+}
+
+.col_tekst_5-1 {
+  font-family: "Montaga";
+  font-size: 20px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  color: var(--mørkebrun);
+  line-height: 28px;
+}
+.col_tekst_5-1 h2 {
+  margin-bottom: 2rem;
+  color: var(--mørkebrun);
+  font-family: "Montaga";
+}
+
+.grid_1-1_tema_5-2 {
+  background-color: #beb4ab;
+  margin-bottom: 2rem;
+}
+
+.col_tekst_5-2 {
+  font-family: "Montaga";
+  font-size: 20px;
+  margin-left: 2rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  color: var(--mørkebrun);
+  line-height: 28px;
+}
+
+.tema_5_img_2 {
+  margin-right: 3rem;
+  margin-top: 2rem;
+}
+
+.video1 {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+.website_4 {
+  margin-right: 50rem;
+  margin-bottom: 4rem;
+}
+
+.grid_1-1_tema_5-3 {
+  background-color: var(--beige);
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+
+.tema_5_img_3 {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.col_tekst_5_3 {
+  font-family: "Montaga";
+  font-size: 20px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 3rem;
+  color: var(--green);
+  line-height: 28px;
+  margin-bottom: 2rem;
+}
+
+.col_tekst_5_3 h2 {
+  margin-bottom: 2rem;
+  margin-left: 7rem;
+  font-family: "Montaga";
+}
+
+.col_tekst_5_3 p {
+  margin-bottom: 1rem;
+}
+
+.grid_1-1_tema_5-4 {
+  background-color: var(--light_green);
+  margin-bottom: 1rem;
+}
+
+.col_tekst_5_4 {
+  font-family: "Montaga";
+  font-size: 20px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 3rem;
+  color: var(--green);
+  line-height: 28px;
+  margin-bottom: 4rem;
+}
+
+.col_tekst_5_4 p {
+  margin-bottom: 1rem;
+}
+
+.tema_5_img_4 {
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+
+.img_om_mig {
+  width: 80%;
+  margin-left: 6rem;
+}
+
+.h1_om_mig {
+  color: var(--mørkebrun);
+  margin-left: 4rem;
+  font-family: "Slabo 13px";
+}
+.tekst_om_mig {
+  background-color: var(--grøn);
+}
+
+.tekst_om_mig p {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Montaga";
+  font-size: 19px;
+  color: var(--pink);
+  line-height: 28px;
+}
+
+.grid_1-1_cv h1 {
+  color: var(--mørkebrun);
+  font-family: "Montaga";
+  text-align: center;
+  font-size: 70px;
+}
+
+.grid_1-1_cv h3 {
+  color: var(--mørkebrun);
+}
+.info_box {
+  background-color: var(--lyseroed);
+  width: 100%;
+  height: 200px;
+  list-style: none;
+  font-family: "Montaga";
+  color: var(--mørkebrun);
+  line-height: 30px;
+  font-size: 20px;
+  border-radius: 7px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.liste_3 {
+  position: relative;
+  text-align: center;
+}
+.uddannelse {
+  background-color: var(--mørkebrun);
+  color: var(--lyseroed);
+  font-family: "Montaga";
+  width: 100%;
+  height: 270px;
+  font-size: 18px;
+  line-height: 30px;
+  border-radius: 7px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.uddannelse h3 {
+  color: var(--lyseroed);
+  text-align: center;
+}
+
+.liste_4 {
+  position: relative;
+  text-align: center;
+}
+
+.sprog {
+  background-color: var(--lyseroed);
+  width: 100%;
+  height: 270px;
+  color: var(--mørkebrun);
+  font-family: "Montaga";
+  font-size: 18px;
+  line-height: 28px;
+  border-radius: 7px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sprog h3 {
+  text-align: center;
+  color: var(--mørkebrun);
+}
+
+.liste_5 {
+  position: relative;
+  text-align: center;
+}
+
+.erfaring {
+  background-color: var(--mørkebrun);
+  width: 100%;
+  height: 270px;
+  color: var(--lyseroed);
+  font-family: "Montaga";
+  font-size: 18px;
+  line-height: 30px;
+  border-radius: 7px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.erfaring h3 {
+  color: var(--lyseroed);
+  text-align: center;
+}
+
+.liste_6 {
+  position: relative;
+  text-align: center;
+}
